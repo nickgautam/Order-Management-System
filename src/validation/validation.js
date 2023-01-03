@@ -33,8 +33,16 @@ function isValidEmailId(value) {
     return /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(value)
 }
 
+//******************* validation for Password ******************/
+function isValidPassword(value) {
+    return /^(?=.*[0-9])(?=.*[a-z])(?=.*[!@#$%^&*])[a-z0-9!@#$%^&*]{5,15}$/.test(value)
+}
 
-module.exports = { isValidObjectId, isValidString, isValidNumber, isValidName, isValidMobileNo, isValidEmailId }
+
+
+
+
+module.exports = { isValidObjectId, isValidString, isValidNumber, isValidName, isValidMobileNo, isValidEmailId, isValidPassword }
 
 
 
